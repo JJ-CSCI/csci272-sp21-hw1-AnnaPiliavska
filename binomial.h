@@ -3,8 +3,8 @@
 
 class Binomial {
 private:
-    float coefficient[3] {0, 1.0, 1.0};
-    int power[3] {0, 1, 1};
+    float coefficient[];
+    int power[];
 public:
     Binomial();
     Binomial(float);
