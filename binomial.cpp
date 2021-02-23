@@ -1,30 +1,25 @@
 #include "binomial.h"
 #include "catch.hpp"
-
-Binomial::Binomial() {
-    coefficient[1] = 1.0;
+    
+Binomial::Binomial() : Binomial(1.0, 1, 1.0, 1) {}
+Binomial::Binomial(float coefficient1) : Binomial(coefficient1, 1, 1.0, 1) {
+    /*coefficient[1] = coefficient1;
     power[1] = 1;
     coefficient[2] = 1.0;
-    power[2] = 1;
+    power[2] = 1;*/
 }
-Binomial::Binomial(float coefficient1) {
-    coefficient[1] = coefficient1;
-    power[1] = 1;
-    coefficient[2] = 1.0;
-    power[2] = 1;
-}
-Binomial::Binomial(float coefficient1, int power1) {
-    coefficient[1] = coefficient1;
+Binomial::Binomial(float coefficient1, int power1) : Binomial(coefficient1, power1, 1.0, 1) {
+    /*coefficient[1] = coefficient1;
     coefficient[2] = 1.0;
     power[2] = 1;
 
     if (power1 < 1)
         power[1] = 1;
     else 
-      power[1] = power1; 
+      power[1] = power1; */
 }
-Binomial::Binomial(float coefficient1, int power1, float coefficient2) {
-    coefficient[1] = coefficient1;
+Binomial::Binomial(float coefficient1, int power1, float coefficient2) : Binomial(coefficient1, power1, coefficient2, 1) {
+    /*coefficient[1] = coefficient1;
     power[1] = power1;
     coefficient[2] = coefficient2;
     power[2] = 1;
@@ -32,7 +27,7 @@ Binomial::Binomial(float coefficient1, int power1, float coefficient2) {
     if (power1 < 1)
         power[1] = 1;
     else 
-      power[1] = power1; 
+      power[1] = power1; */
 }
 Binomial::Binomial(float coefficient1, int power1, float coefficient2, int power2) {
     if (power1 < 1)
